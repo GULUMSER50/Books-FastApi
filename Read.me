@@ -1,0 +1,40 @@
+FastAPI Book Library API
+
+Welcome to the FastAPI Book Library API! 
+This API allows you to manage books with basic CRUD operations.
+
+1.Getting Started
+
+### Prerequisites
+
+Make sure you have Python installed. You can install the required dependencies by running:
+pip install -r requirements.txt
+uvicorn main:app --reload
+
+2.Run the FastAPI Project
+
+Navigate to your project directory and run:
+
+3. Access Swagger UI
+
+Open your web browser and go to:
+Swagger UI ( or by basicall adding '/docs' to the end of the url.)
+
+4. Explore and Test API Endpoints
+
+Use Swagger UI to explore available API endpoints.
+Click on paths to see operations.
+Test each endpoint by clicking "Try it out."
+
+5. Sample Curl Commands
+
+Here are sample curl commands:
+# Get all books
+curl -X GET "http://localhost:8000/books" -H "accept: application/json"
+
+# Get details of a book
+curl -X GET "http://localhost:8000/books/1" -H "accept: application/json"
+
+# Create a new book
+curl -X POST "http://localhost:8000/create-book" -H "accept: application/json" -H "Content-Type: application/json" -d '{"title":"New Book","author":"Author","description":"Description","rating":5,"published_date":2022}'
+
